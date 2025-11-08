@@ -9,10 +9,10 @@ import { Button } from "@/components/ui/button";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* ✅ Header now from your UI */}
+      {/* ✅ Header Section */}
       <Header />
 
-      {/* ✅ Main content from your favorite UI */}
+      {/* ✅ Main content */}
       <main>
         <HeroSection />
         <CategoriesSection />
@@ -20,7 +20,7 @@ const Index = () => {
         <NearbyNGOs />
       </main>
 
-      {/* ✅ Add a small CTA section using your backend’s style */}
+      {/* ✅ CTA Section */}
       <section className="py-20 bg-gradient-hero text-white text-center">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -41,10 +41,11 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ✅ Your beautiful footer */}
+      {/* ✅ Footer Section */}
       <footer className="bg-muted py-16">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
+            {/* Brand Info */}
             <div className="space-y-4">
               <h3 className="font-bold text-lg">DenaSetu</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
@@ -52,33 +53,36 @@ const Index = () => {
               </p>
             </div>
 
+            {/* Quick Links */}
             <div className="space-y-4">
               <h4 className="font-medium">Quick Links</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#" className="hover:text-foreground transition-smooth">How it Works</a></li>
-                <li><a href="#" className="hover:text-foreground transition-smooth">NGO Registration</a></li>
-                <li><a href="#" className="hover:text-foreground transition-smooth">Impact Stories</a></li>
-                <li><a href="#" className="hover:text-foreground transition-smooth">Volunteer</a></li>
+                <li><Link to="/how-it-works" className="hover:text-foreground transition-smooth">How it Works</Link></li>
+                <li><Link to="/ngo-registration" className="hover:text-foreground transition-smooth">NGO Registration</Link></li>
+                <li><Link to="/impact" className="hover:text-foreground transition-smooth">Impact Stories</Link></li>
+                <li><Link to="/volunteer" className="hover:text-foreground transition-smooth">Volunteer</Link></li>
               </ul>
             </div>
 
+            {/* Categories */}
             <div className="space-y-4">
               <h4 className="font-medium">Categories</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#" className="hover:text-foreground transition-smooth">Education</a></li>
-                <li><a href="#" className="hover:text-foreground transition-smooth">Healthcare</a></li>
-                <li><a href="#" className="hover:text-foreground transition-smooth">Shelter Support</a></li>
-                <li><a href="#" className="hover:text-foreground transition-smooth">Emergency Relief</a></li>
+                <li><Link to="/categories?type=education" className="hover:text-foreground transition-smooth">Education</Link></li>
+                <li><Link to="/categories?type=healthcare" className="hover:text-foreground transition-smooth">Healthcare</Link></li>
+                <li><Link to="/categories?type=shelter" className="hover:text-foreground transition-smooth">Shelter Support</Link></li>
+                <li><Link to="/categories?type=relief" className="hover:text-foreground transition-smooth">Emergency Relief</Link></li>
               </ul>
             </div>
 
+            {/* Support */}
             <div className="space-y-4">
               <h4 className="font-medium">Support</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#" className="hover:text-foreground transition-smooth">Contact Us</a></li>
-                <li><a href="#" className="hover:text-foreground transition-smooth">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-foreground transition-smooth">Terms of Service</a></li>
-                <li><a href="#" className="hover:text-foreground transition-smooth">FAQ</a></li>
+                <li><Link to="/contact" className="hover:text-foreground transition-smooth">Contact Us</Link></li>
+                <li><Link to="/privacy-policy" className="hover:text-foreground transition-smooth">Privacy Policy</Link></li>
+                <li><Link to="/terms" className="hover:text-foreground transition-smooth">Terms of Service</Link></li>
+                <li><Link to="/faq" className="hover:text-foreground transition-smooth">FAQ</Link></li>
               </ul>
             </div>
           </div>
